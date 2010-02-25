@@ -1,3 +1,13 @@
-exports.service = function() {
-	require("sys-log").trace("Conn: " + con);
-}
+var act = require("act");
+
+act.register("fails", {
+	all : function() {
+	},
+	
+	get : function() {
+	},
+});
+
+exports.execute = function() {
+	act.execute();
+};
