@@ -1,8 +1,8 @@
-var db = require("db-core");
-db.pgLoad();
-var con = db.pgConnect("fail");
+var migrationConn = require("db-core").pgConnect("fail");
+require("fail-migrations").migrate(migrationConn);
+migrationConn.close();
 
-require("fail-migrations").migrate(con);
+var con = require("db-core").pgConnect("fail");
 
 (function service() {
 	var resp = require("resp");
