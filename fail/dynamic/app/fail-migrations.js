@@ -1,3 +1,5 @@
-var dbMigrations = require("db-migrations");
+var dbm = require("db-migrations");
 
-dbMigrations.test();
+exports.migrate = function() {
+	
+}
