@@ -8,6 +8,10 @@ dbm.version(1, "fail-description", function(con) {
 	con.update("ALTER TABLE fails ADD description VARCHAR(1024)");
 });
 
+dbm.version(2, "fail-test", function(con) {
+	con.update("INSERT INTO fails (name, description) VALUES (?, ?)", 'First case', 'Full description');
+});
+
 exports.migrate = function(con) {
 	dbm.migrate(con);
 }
