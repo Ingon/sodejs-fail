@@ -1,4 +1,4 @@
-var act = require("act");
+var act = require("actions");
 var req = require("request");
 var resp = require("response");
 
