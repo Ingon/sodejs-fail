@@ -1,6 +1,6 @@
 var act = require("act");
-var req = require("req");
-var resp = require("resp");
+var req = require("request");
+var resp = require("response");
 
 act.register("fails", {
 	all : function() {
